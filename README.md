@@ -42,6 +42,7 @@
 | 에이전트 수 | 5개 전문 분야별 AI 에이전트 |
 
 ---
+<img width="1089" height="1276" alt="image" src="https://github.com/user-attachments/assets/0c61bd5a-4ba4-439e-9e2f-98067d9bbd5d" />
 
 ## ✨ 핵심 기능
 
@@ -59,6 +60,7 @@
 | **비즈니스 메트릭** | KPI 자동 계산 및 시각화 | Custom Analytics Engine |
 
 ---
+<img width="1079" height="1279" alt="image" src="https://github.com/user-attachments/assets/6921d785-142b-4c36-af58-6908a06a238f" />
 
 ### 🤖 AI 자동화 기능
 
