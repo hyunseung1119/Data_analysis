@@ -1,0 +1,60 @@
+# Orchestrator configuration
+orchestrator:
+  model: gpt-4.1-mini
+  temperature: 0.3
+  max_retries: 3
+  timeout_seconds: 60
+
+# Agent definitions
+agents:
+  law_expert:
+    enabled: true
+    name: "법령 전문가"
+    description: "법령 검색 및 해석 전문가. RAG 기반으로 관련 법령을 찾고 해석합니다."
+    model: gpt-4.1-mini
+    temperature: 0.2
+    priority: 1
+    tools:
+      - rag_search
+      - law_reference
+    
+  calculator:
+    enabled: true
+    name: "계산 전문가"
+    description: "세금 계산 및 시뮬레이션 전문가. 정확한 세금 계산과 시나리오 비교를 수행합니다."
+    model: gpt-4.1-mini
+    temperature: 0.1
+    priority: 2
+    tools:
+      - tax_calculator
+      - simulation
+    
+  risk_analyst:
+    enabled: true
+    name: "리스크 분석가"
+    description: "세무조사 리스크 분석 전문가. 잠재적 위험 요소를 식별하고 평가합니다."
+    model: gpt-4.1-mini
+    temperature: 0.3
+    priority: 3
+    tools:
+      - risk_assessment
+      - pattern_analysis
+    
+  strategist:
+    enabled: true
+    name: "전략가"
+    description: "종합 전략 수립 전문가. 모든 분석 결과를 종합하여 최적의 의사결정을 제안합니다."
+    model: gpt-4.1-mini
+    temperature: 0.4
+    priority: 4
+    tools: []
+
+# Execution settings
+execution:
+  default_order:
+    - law_expert
+    - calculator
+    - risk_analyst
+    - strategist
+  parallel_enabled: false
+  max_iterations: 10

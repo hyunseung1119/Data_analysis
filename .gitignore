@@ -1,0 +1,39 @@
+# Environment
+.env
+.env.local
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Storage
+storage/chroma/*
+storage/sqlite/*
+storage/logs/*
+!storage/chroma/.gitkeep
+!storage/sqlite/.gitkeep
+!storage/logs/.gitkeep
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.cache/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
